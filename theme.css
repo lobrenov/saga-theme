@@ -566,7 +566,7 @@ body.theme-dark.theme-dark {
 /* Bullets by level: bullet, hollow bullet, square, diamond, repeating */
 .markdown-rendered ul > li,
 .markdown-source-view.mod-cm6 .HyperMD-list-line-1 {
-  --list-bullet-size: 0.3em;
+  --list-bullet-size: 0.34em;
   --list-bullet-radius: 50%;
   --list-bullet-border: none;
   --list-bullet-transform: none;
@@ -575,7 +575,7 @@ body.theme-dark.theme-dark {
 
 .markdown-rendered :is(ul, ol) ul > li,
 .markdown-source-view.mod-cm6 .HyperMD-list-line-2 {
-  --list-bullet-size: 0.36em;
+  --list-bullet-size: 0.34em;
   --list-bullet-radius: 50%;
   --list-bullet-border: 1px solid var(--list-marker-color);
   --list-bullet-transform: none;
@@ -584,7 +584,7 @@ body.theme-dark.theme-dark {
 
 .markdown-rendered :is(ul, ol) :is(ul, ol) ul > li,
 .markdown-source-view.mod-cm6 .HyperMD-list-line-3 {
-  --list-bullet-size: 0.3em;
+  --list-bullet-size: 0.32em;
   --list-bullet-radius: 0;
   --list-bullet-border: none;
   --list-bullet-transform: none;
@@ -593,16 +593,16 @@ body.theme-dark.theme-dark {
 
 .markdown-rendered :is(ul, ol) :is(ul, ol) :is(ul, ol) ul > li,
 .markdown-source-view.mod-cm6 .HyperMD-list-line-4 {
-  --list-bullet-size: 0.3em;
+  --list-bullet-size: 0.32em;
   --list-bullet-radius: 0;
   --list-bullet-border: none;
-  --list-bullet-transform: rotate(45deg) scale(0.85);
+  --list-bullet-transform: rotate(45deg) scale(0.9);
   --saga-bullet-fill: var(--list-marker-color);
 }
 
 .markdown-rendered :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ul > li,
 .markdown-source-view.mod-cm6 .HyperMD-list-line-5 {
-  --list-bullet-size: 0.3em;
+  --list-bullet-size: 0.34em;
   --list-bullet-radius: 50%;
   --list-bullet-border: none;
   --list-bullet-transform: none;
@@ -611,7 +611,7 @@ body.theme-dark.theme-dark {
 
 .markdown-rendered :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ul > li,
 .markdown-source-view.mod-cm6 .HyperMD-list-line-6 {
-  --list-bullet-size: 0.36em;
+  --list-bullet-size: 0.34em;
   --list-bullet-radius: 50%;
   --list-bullet-border: 1px solid var(--list-marker-color);
   --list-bullet-transform: none;
@@ -620,7 +620,7 @@ body.theme-dark.theme-dark {
 
 .markdown-rendered :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ul > li,
 .markdown-source-view.mod-cm6 .HyperMD-list-line-7 {
-  --list-bullet-size: 0.3em;
+  --list-bullet-size: 0.32em;
   --list-bullet-radius: 0;
   --list-bullet-border: none;
   --list-bullet-transform: none;
@@ -629,10 +629,10 @@ body.theme-dark.theme-dark {
 
 .markdown-rendered :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ul > li,
 .markdown-source-view.mod-cm6 .HyperMD-list-line-8 {
-  --list-bullet-size: 0.3em;
+  --list-bullet-size: 0.32em;
   --list-bullet-radius: 0;
   --list-bullet-border: none;
-  --list-bullet-transform: rotate(45deg) scale(0.85);
+  --list-bullet-transform: rotate(45deg) scale(0.9);
   --saga-bullet-fill: var(--list-marker-color);
 }
 
