@@ -640,6 +640,23 @@ body.theme-dark.theme-dark {
   background-color: var(--saga-bullet-fill, var(--list-marker-color));
 }
 
+/* Space after bullets and checkboxes: 0.1em wider than Obsidian's */
+.markdown-rendered .list-bullet {
+  margin-inline-start: -0.9em;
+}
+
+.markdown-source-view.mod-cm6 .cm-formatting-list-ul .list-bullet {
+  margin-inline-end: 0.1em;
+}
+
+.markdown-preview-view .task-list-item-checkbox {
+  margin-inline-end: 0.7em;
+}
+
+.markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox {
+  margin-inline-end: 0.35em;
+}
+
 /* Alternative checkboxes: the Alternative Checkboxes Reference Set's characters and Lucide icons
  * (github.com/damiankorcz/Alternative-Checkboxes-Reference-Set, Unlicense; lucide.dev, ISC).
  * A snippet setting --theme-alternative-checkboxes: disable on body turns them off. */
