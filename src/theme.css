@@ -1,0 +1,543 @@
+/* Saga: a modern parchment theme for Obsidian, matching the Saga app.
+ * Palettes are Saga's tokens (src/renderer/tokens.css); light is Saga as is, dark is the same family on leather and ink. */
+
+/* Palette: light */
+.theme-light {
+  --saga-ground: #f4efe5;
+  --saga-sheet: #fbf8f2;
+  --saga-sheet-raised: #fffdf8;
+  --saga-chrome: #ece5d7;
+  --saga-field: #f9f5ec;
+  --saga-chip: #eee7da;
+  --saga-segment: #efe8db;
+  --saga-rule: #ddd3c2;
+  --saga-border: #d8cdb9;
+  --saga-border-strong: #c9bba3;
+
+  --saga-ink: #2a241d;
+  --saga-ink-2: #5f5547;
+  --saga-ink-3: #6b5f51;
+  --saga-ink-folder: #6f6048;
+  --saga-on-accent: #ffffff;
+
+  --saga-rubric: #9a3324;
+  --saga-rubric-hover: #6f2219;
+  --saga-gilt: #b08d4c;
+  --saga-ok: #336d52;
+
+  --saga-hover: rgba(42, 36, 29, 0.06);
+  --saga-toast: rgba(42, 36, 29, 0.94);
+  --saga-shadow: rgba(42, 36, 29, 0.5);
+
+  --saga-red: #a8321f;
+  --saga-orange: #8f5412;
+  --saga-yellow: #b08d4c;
+  --saga-green: #336d52;
+  --saga-cyan: #2f5f5a;
+  --saga-blue: #3d4a7c;
+  --saga-purple: #6b3a62;
+  --saga-pink: #a1506a;
+  --saga-red-rgb: 168, 50, 31;
+  --saga-orange-rgb: 143, 84, 18;
+  --saga-yellow-rgb: 176, 141, 76;
+  --saga-green-rgb: 51, 109, 82;
+  --saga-cyan-rgb: 47, 95, 90;
+  --saga-blue-rgb: 61, 74, 124;
+  --saga-purple-rgb: 107, 58, 98;
+  --saga-pink-rgb: 161, 80, 106;
+}
+
+/* Palette: dark (warm leather and ink; parchment-coloured ink) */
+.theme-dark {
+  --saga-ground: #1b1612;
+  --saga-sheet: #231d17;
+  --saga-sheet-raised: #2b241d;
+  --saga-chrome: #15110e;
+  --saga-field: #201a15;
+  --saga-chip: #2d261e;
+  --saga-segment: #2a231c;
+  --saga-rule: #3a3126;
+  --saga-border: #453b2e;
+  --saga-border-strong: #5a4d3b;
+
+  --saga-ink: #ece3d2;
+  --saga-ink-2: #bfb39e;
+  --saga-ink-3: #a99d88;
+  --saga-ink-folder: #b9a47c;
+  --saga-on-accent: #ffffff;
+
+  --saga-rubric: #e0846f;
+  --saga-rubric-hover: #eca08d;
+  --saga-gilt: #c9a55e;
+  --saga-ok: #7bbf9b;
+
+  --saga-hover: rgba(236, 227, 210, 0.07);
+  --saga-toast: rgba(10, 8, 6, 0.95);
+  --saga-shadow: rgba(0, 0, 0, 0.7);
+
+  --saga-red: #e0786a;
+  --saga-orange: #d89a52;
+  --saga-yellow: #c9a55e;
+  --saga-green: #7bbf9b;
+  --saga-cyan: #6fb3a9;
+  --saga-blue: #9aa6dc;
+  --saga-purple: #c58bb9;
+  --saga-pink: #dc92a8;
+  --saga-red-rgb: 224, 120, 106;
+  --saga-orange-rgb: 216, 154, 82;
+  --saga-yellow-rgb: 201, 165, 94;
+  --saga-green-rgb: 123, 191, 155;
+  --saga-cyan-rgb: 111, 179, 169;
+  --saga-blue-rgb: 154, 166, 220;
+  --saga-purple-rgb: 197, 139, 185;
+  --saga-pink-rgb: 220, 146, 168;
+}
+
+/* Saga plugin renderer colours (the plugin sets these on body and body.theme-dark) */
+body.theme-light.theme-light {
+  --saga-character: #9a3324;
+  --saga-location: #2f5f5a;
+  --saga-faction: #3d4a7c;
+  --saga-item: #845512;
+  --saga-map: #4f5b3a;
+  --saga-document: #5e564b;
+  --saga-character-tint: #efdcd3;
+  --saga-location-tint: #dfe8e3;
+  --saga-faction-tint: #eaedf5;
+  --saga-item-tint: #f4e8cf;
+  --saga-map-tint: #d9e1da;
+  --saga-document-tint: #eee7da;
+}
+
+body.theme-dark.theme-dark {
+  --saga-character: #e0846f;
+  --saga-location: #6fb3a9;
+  --saga-faction: #9aa6dc;
+  --saga-item: #d4a35a;
+  --saga-map: #a3b57e;
+  --saga-document: #b3a898;
+  --saga-character-tint: #3a2622;
+  --saga-location-tint: #1f302d;
+  --saga-faction-tint: #262a3d;
+  --saga-item-tint: #392d1c;
+  --saga-map-tint: #2b3122;
+  --saga-document-tint: #2f2a24;
+}
+
+/* Shared: type, shape, structure */
+.theme-light,
+.theme-dark {
+  --font-text-theme: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif;
+  --font-interface-theme: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-monospace-theme: 'IBM Plex Mono', ui-monospace, monospace;
+  --saga-font-display: 'Fraunces Variable', Fraunces, Georgia, serif;
+  --saga-tracking-label: 0.12em;
+  --saga-tracking-smallcaps: 0.1em;
+
+  --line-height-normal: 1.65;
+  --p-spacing: 0.9rem;
+  --bold-weight: 600;
+
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 10px;
+  --radius-xl: 12px;
+
+  /* Headings */
+  --h1-font: var(--saga-font-display);
+  --h2-font: var(--saga-font-display);
+  --h3-font: var(--saga-font-display);
+  --h4-font: var(--saga-font-display);
+  --h5-font: var(--saga-font-display);
+  --h6-font: var(--saga-font-display);
+  --h1-size: 1.9em;
+  --h2-size: 1.5em;
+  --h3-size: 1.25em;
+  --h4-size: 1.05em;
+  --h5-size: 1.05em;
+  --h6-size: 1.05em;
+  --h1-weight: 600;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --h5-weight: 600;
+  --h6-weight: 600;
+  --h1-line-height: 1.2;
+  --h2-line-height: 1.2;
+  --h3-line-height: 1.2;
+  --h4-line-height: 1.2;
+  --h5-line-height: 1.2;
+  --h6-line-height: 1.2;
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-muted);
+  --h6-variant: small-caps;
+  --h6-letter-spacing: 0.04em;
+  --heading-spacing: 1.6em;
+  --inline-title-font: var(--saga-font-display);
+  --inline-title-size: 46px;
+  --inline-title-weight: 600;
+  --inline-title-line-height: 1.08;
+  --inline-title-color: var(--text-normal);
+  --inline-title-margin-bottom: 0.6em;
+}
+
+/* Colour roles */
+.theme-light,
+.theme-dark {
+  --color-base-00: var(--saga-sheet);
+  --color-base-05: var(--saga-sheet-raised);
+  --color-base-10: var(--saga-field);
+  --color-base-20: var(--saga-ground);
+  --color-base-25: var(--saga-chip);
+  --color-base-30: var(--saga-rule);
+  --color-base-35: var(--saga-border);
+  --color-base-40: var(--saga-border-strong);
+  --color-base-50: var(--saga-ink-3);
+  --color-base-60: var(--saga-ink-3);
+  --color-base-70: var(--saga-ink-2);
+  --color-base-100: var(--saga-ink);
+
+  --background-primary: var(--saga-sheet);
+  --background-primary-alt: var(--saga-field);
+  --background-secondary: var(--saga-ground);
+  --background-secondary-alt: var(--saga-chrome);
+  --background-modifier-border: var(--saga-rule);
+  --background-modifier-border-hover: var(--saga-border-strong);
+  --background-modifier-border-focus: var(--saga-rubric);
+  --background-modifier-form-field: var(--saga-sheet-raised);
+  --background-modifier-form-field-hover: var(--saga-sheet-raised);
+  --background-modifier-hover: var(--saga-hover);
+  --background-modifier-active-hover: color-mix(in srgb, var(--saga-rubric) 12%, transparent);
+  --background-modifier-error: var(--saga-red);
+  --background-modifier-error-hover: var(--saga-red);
+  --background-modifier-warning: var(--saga-orange);
+  --background-modifier-warning-hover: var(--saga-orange);
+  --background-modifier-success: var(--saga-green);
+  --background-modifier-error-rgb: var(--saga-red-rgb);
+  --background-modifier-success-rgb: var(--saga-green-rgb);
+  --background-modifier-box-shadow: var(--saga-shadow);
+  --background-modifier-message: var(--saga-toast);
+  --background-modifier-cover: color-mix(in srgb, var(--saga-sheet) 55%, transparent);
+
+  --text-normal: var(--saga-ink);
+  --text-muted: var(--saga-ink-2);
+  --text-faint: var(--saga-ink-3);
+  --text-on-accent: var(--saga-on-accent);
+  --text-error: var(--saga-red);
+  --text-warning: var(--saga-orange);
+  --text-success: var(--saga-green);
+  --text-accent: var(--saga-rubric);
+  --text-accent-hover: var(--saga-rubric-hover);
+  --text-selection: color-mix(in srgb, var(--saga-rubric) 22%, transparent);
+  --text-highlight-bg: color-mix(in srgb, var(--saga-gilt) 38%, transparent);
+
+  --interactive-normal: var(--saga-chip);
+  --interactive-hover: var(--saga-segment);
+  --interactive-accent: var(--saga-rubric);
+  --interactive-accent-hover: var(--saga-rubric-hover);
+
+  --color-red: var(--saga-red);
+  --color-orange: var(--saga-orange);
+  --color-yellow: var(--saga-yellow);
+  --color-green: var(--saga-green);
+  --color-cyan: var(--saga-cyan);
+  --color-blue: var(--saga-blue);
+  --color-purple: var(--saga-purple);
+  --color-pink: var(--saga-pink);
+  --color-red-rgb: var(--saga-red-rgb);
+  --color-orange-rgb: var(--saga-orange-rgb);
+  --color-yellow-rgb: var(--saga-yellow-rgb);
+  --color-green-rgb: var(--saga-green-rgb);
+  --color-cyan-rgb: var(--saga-cyan-rgb);
+  --color-blue-rgb: var(--saga-blue-rgb);
+  --color-purple-rgb: var(--saga-purple-rgb);
+  --color-pink-rgb: var(--saga-pink-rgb);
+
+  --color-accent: var(--saga-rubric);
+  --color-accent-1: var(--saga-rubric);
+  --color-accent-2: var(--saga-rubric-hover);
+
+  --divider-color: var(--saga-border);
+  --hr-color: var(--saga-rule);
+  --hr-thickness: 1px;
+  --icon-color: var(--text-muted);
+  --icon-opacity: 1;
+  --shadow-s: 0 1px 2px color-mix(in srgb, var(--saga-shadow) 24%, transparent);
+  --shadow-l: 0 14px 30px -18px var(--saga-shadow);
+  --input-shadow: none;
+  --input-shadow-hover: none;
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--saga-ink) 14%, transparent);
+  --scrollbar-active-thumb-bg: color-mix(in srgb, var(--saga-ink) 26%, transparent);
+}
+
+/* The dark accent fill carries white text; the lighter rubric is for text on the sheet */
+.theme-dark {
+  --interactive-accent: #b5503d;
+  --interactive-accent-hover: #c0553f;
+  --color-accent: #b5503d;
+  --color-accent-1: #b5503d;
+  --color-accent-2: #c0553f;
+}
+
+/* Text */
+.theme-light,
+.theme-dark {
+  --link-color: var(--saga-rubric);
+  --link-color-hover: var(--saga-rubric-hover);
+  --link-decoration: underline;
+  --link-decoration-hover: underline;
+  --link-decoration-thickness: 1px;
+  --link-external-color: var(--saga-rubric);
+  --link-external-color-hover: var(--saga-rubric-hover);
+  --link-unresolved-color: var(--saga-ink-3);
+  --link-unresolved-opacity: 1;
+  --link-unresolved-decoration-style: dashed;
+  --link-unresolved-decoration-color: var(--saga-ink-folder);
+
+  --blockquote-border-color: var(--saga-gilt);
+  --blockquote-border-thickness: 3px;
+  --blockquote-color: var(--saga-ink-2);
+  --blockquote-font-style: italic;
+
+  --list-marker-color: var(--saga-ink-3);
+  --list-marker-color-hover: var(--saga-ink-2);
+  --list-marker-color-collapsed: var(--saga-rubric);
+  --indentation-guide-color: var(--saga-rule);
+  --indentation-guide-color-active: var(--saga-border-strong);
+
+  --code-background: var(--saga-chip);
+  --code-border-color: var(--saga-rule);
+  --code-border-width: 1px;
+  --code-radius: var(--radius-s);
+  --code-size: 0.85em;
+  --code-normal: var(--saga-ink-2);
+  --code-comment: var(--saga-ink-3);
+  --code-punctuation: var(--saga-ink-3);
+  --code-keyword: var(--saga-purple);
+  --code-function: var(--saga-blue);
+  --code-string: var(--saga-green);
+  --code-value: var(--saga-orange);
+  --code-property: var(--saga-cyan);
+  --code-tag: var(--saga-red);
+  --code-important: var(--saga-orange);
+  --code-operator: var(--saga-red);
+
+  --tag-color: var(--saga-ink-2);
+  --tag-color-hover: var(--saga-ink);
+  --tag-background: var(--saga-chip);
+  --tag-background-hover: var(--saga-segment);
+  --tag-border-color: var(--saga-rule);
+  --tag-border-color-hover: var(--saga-border);
+  --tag-border-width: 1px;
+  --tag-radius: 999px;
+  --tag-size: 0.8em;
+  --tag-weight: 500;
+
+  --table-border-color: var(--saga-rule);
+  --table-header-background: var(--saga-chip);
+  --table-header-font: var(--font-interface);
+  --table-header-size: 12px;
+  --table-header-weight: 600;
+  --table-text-size: 0.94em;
+
+  --embed-border-start: 3px solid var(--saga-gilt);
+  --embed-background: transparent;
+  --embed-padding: 0 0 0 var(--size-4-4);
+}
+
+/* Callouts */
+.theme-light,
+.theme-dark {
+  --callout-radius: var(--radius-m);
+  --callout-border-width: 1px;
+  --callout-border-opacity: 0.35;
+  --callout-title-weight: 600;
+  --callout-title-size: 0.95em;
+  --callout-content-background: transparent;
+}
+
+/* Metadata: small-caps keys, serif values */
+.theme-light,
+.theme-dark {
+  --metadata-label-font: var(--font-interface);
+  --metadata-label-font-size: 11px;
+  --metadata-label-font-weight: 600;
+  --metadata-label-text-color: var(--saga-ink-3);
+  --metadata-label-text-color-hover: var(--saga-ink);
+  --metadata-input-font: var(--font-text);
+  --metadata-input-font-size: 15px;
+  --metadata-input-text-color: var(--saga-ink);
+  --metadata-property-radius: 7px;
+  --metadata-divider-color: transparent;
+  --metadata-divider-width: 0;
+}
+
+.metadata-property-key-input,
+.metadata-properties-title {
+  text-transform: uppercase;
+  letter-spacing: var(--saga-tracking-smallcaps);
+}
+
+.metadata-properties-title {
+  font-family: var(--font-interface);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--saga-ink-3);
+}
+
+.metadata-container {
+  padding-bottom: var(--size-4-3);
+  border-bottom: 1px solid var(--saga-rule);
+}
+
+/* Chrome: tabs, navigation, ribbon, status bar */
+.theme-light,
+.theme-dark {
+  --titlebar-background: var(--saga-ground);
+  --titlebar-background-focused: var(--saga-ground);
+  --titlebar-border-color: var(--saga-rule);
+  --titlebar-border-width: 1px;
+  --ribbon-background: var(--saga-ground);
+  --ribbon-background-collapsed: var(--saga-sheet);
+  --status-bar-background: var(--saga-ground);
+  --status-bar-border-color: var(--saga-rule);
+  --status-bar-text-color: var(--saga-ink-2);
+
+  --tab-container-background: var(--saga-ground);
+  --sidebar-tab-container-background: var(--saga-chrome);
+  --tab-background-active: var(--saga-sheet);
+  --tab-text-color: var(--saga-ink-2);
+  --tab-text-color-focused: var(--saga-ink-2);
+  --tab-text-color-active: var(--saga-ink);
+  --tab-text-color-focused-active: var(--saga-ink);
+  --tab-text-color-focused-active-current: var(--saga-ink);
+  --tab-outline-color: var(--saga-rule);
+  --tab-outline-width: 1px;
+  --tab-font-weight: 500;
+  --tab-radius: var(--radius-m);
+  --tab-radius-active: 10px 10px 0 0;
+
+  --nav-item-color: var(--saga-ink);
+  --nav-item-color-hover: var(--saga-ink);
+  --nav-item-color-active: var(--saga-ink);
+  --nav-item-color-selected: var(--saga-ink);
+  --nav-item-background-hover: var(--saga-segment);
+  --nav-item-background-active: var(--saga-segment);
+  --nav-item-background-selected: var(--saga-sheet);
+  --nav-item-weight-active: 600;
+  --nav-item-radius: var(--radius-m);
+  --nav-heading-color: var(--saga-ink-2);
+  --nav-heading-color-hover: var(--saga-ink);
+  --nav-heading-weight: 600;
+  --nav-collapse-icon-color: var(--saga-ink-3);
+  --nav-collapse-icon-color-collapsed: var(--saga-ink-3);
+  --nav-indentation-guide-color: var(--saga-rule);
+
+  --file-header-font: var(--font-interface);
+  --file-header-font-size: 13px;
+}
+
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+  background-color: var(--saga-chrome);
+}
+
+.nav-file-title.is-active,
+.tree-item-self.is-active {
+  box-shadow: inset 0 0 0 1px var(--saga-border);
+}
+
+.tag,
+.nav-header .nav-buttons-container,
+.workspace-tab-header-inner-title {
+  font-family: var(--font-interface);
+}
+
+/* Controls */
+.theme-light,
+.theme-dark {
+  --input-radius: 7px;
+  --input-border-width: 1px;
+  --input-focus-border-color: var(--saga-rubric);
+  --input-hover-border-color: var(--saga-border-strong);
+  --input-unfocused-border-color: var(--saga-border);
+  --button-radius: var(--radius-m);
+  --checkbox-radius: var(--radius-s);
+  --checkbox-color: var(--saga-rubric);
+  --checkbox-color-hover: var(--saga-rubric-hover);
+  --checkbox-border-color: var(--saga-ink-3);
+  --checkbox-border-color-hover: var(--saga-ink-2);
+  --checkbox-marker-color: var(--saga-on-accent);
+  --toggle-thumb-color: var(--saga-sheet-raised);
+  --modal-background: var(--saga-sheet);
+  --modal-border-color: var(--saga-border);
+  --modal-border-width: 1px;
+  --modal-radius: 16px;
+  --prompt-background: var(--saga-sheet);
+  --prompt-border-color: var(--saga-border);
+  --prompt-border-width: 1px;
+  --setting-items-background: var(--saga-field);
+  --setting-items-border-color: var(--saga-rule);
+  --setting-items-border-width: 1px;
+  --setting-items-radius: var(--radius-l);
+  --setting-group-heading-color: var(--saga-ink-3);
+}
+
+.theme-dark {
+  --checkbox-color: #b5503d;
+  --checkbox-color-hover: #c0553f;
+}
+
+.setting-group-heading,
+.setting-item-heading .setting-item-name {
+  font-family: var(--font-interface);
+}
+
+.modal,
+.prompt {
+  box-shadow: 0 30px 80px -30px var(--saga-shadow);
+}
+
+/* Reading and editing text */
+.markdown-rendered strong,
+.cm-strong {
+  font-weight: 600;
+}
+
+.markdown-rendered del,
+.cm-strikethrough {
+  color: var(--saga-ink-3);
+}
+
+.markdown-rendered code,
+.cm-inline-code {
+  font-family: var(--font-monospace);
+}
+
+.markdown-rendered .inline-title,
+.inline-title {
+  letter-spacing: -0.015em;
+}
+
+.markdown-rendered a.internal-link,
+.cm-hmd-internal-link .cm-underline {
+  text-decoration-color: color-mix(in srgb, var(--saga-rubric) 45%, transparent);
+  text-underline-offset: 2px;
+}
+
+.markdown-rendered a.internal-link:hover {
+  text-decoration-color: var(--saga-rubric);
+}
+
+.markdown-rendered .internal-link.is-unresolved {
+  text-decoration-line: underline;
+}
+
+/* Focus rings follow Saga: a rubric outline on the ground */
+:focus-visible {
+  outline-color: var(--saga-rubric);
+}
