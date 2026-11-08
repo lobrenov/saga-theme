@@ -4,9 +4,14 @@ An Obsidian theme (name "Saga", light and dark) in the Saga app's modern parchme
 
 ## Files
 - `src/theme.css` hand-written source
-- `build.mjs` (`npm run build`) writes `theme.css`: `@font-face` rules with the woff2 files as base64 data URIs, then the source. The built `theme.css` is committed; BRAT reads it from the default branch.
+- `build.mjs` (`npm run build`) writes `theme.css`: `@font-face` rules with the woff2 files as base64 data URIs, then the source. The built `theme.css` is committed.
 - `fonts/` vendored woff2 files and their SIL OFL notices (`LICENSE-*.txt`)
 - `manifest.json`
+- `versions.json` each theme version's minimum Obsidian version
+- `.github/workflows/release.yml` on a pushed tag, creates a draft GitHub release with `manifest.json` and `theme.css` attached
+
+## Release
+Bump `version` in `manifest.json` and `package.json`, add it to `versions.json`, build, commit, then push a tag named the version (`git tag 0.1.2 && git push origin 0.1.2`). Publish the draft release the workflow creates.
 
 ## Install
 With BRAT: Add beta theme, `lobrenov/saga-theme`. Or copy `manifest.json` and `theme.css` into `<vault>/.obsidian/themes/Saga/`.
