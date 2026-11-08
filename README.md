@@ -21,7 +21,7 @@ With BRAT: Add beta theme, `lobrenov/saga-theme`. Or copy `manifest.json` and `t
 | chrome (sidebars) | `#ece5d7` | `#15110e` |
 | ink / ink-2 / ink-3 | `#2a241d` / `#5f5547` / `#6b5f51` | `#ece3d2` / `#bfb39e` / `#a99d88` |
 | rubric (links, accent text) | `#9a3324` | `#e0846f` |
-| accent fill (buttons, checked boxes, white text) | `#9a3324` | `#b5503d` |
+| accent fill (buttons, checked boxes, white text; `--accent-h/s/l`) | `#9a3324` | `#b5503d` |
 | gilt (blockquote rule, highlight) | `#b08d4c` | `#c9a55e` |
 | rule | `#ddd3c2` | `#3a3126` |
 
@@ -37,6 +37,10 @@ The plugin's renderer colours (`--saga-character`, `--saga-location`, `--saga-fa
 
 ## Selector rules
 Sidebar background (chrome), selected file outline, property labels and divider, tag, modal and prompt shadows, link underline colour, focus outline colour.
+
+## Lists
+- Bullets by level: bullet, hollow bullet, square, diamond, repeating (levels 1 to 8)
+- Alternative checkboxes: the [Alternative Checkboxes Reference Set](https://github.com/damiankorcz/Alternative-Checkboxes-Reference-Set)'s 20 characters with its Lucide icons, in Saga hues; `[-]` lines are struck through. A snippet setting `--theme-alternative-checkboxes: disable` on `body` turns them off.
 
 ## Contrast
 Body ink, muted and faint text, rubric links and the accent fill's white text meet WCAG AA (4.5:1) on the sheet, ground, chrome and chip surfaces in both modes. Gilt is decorative only.
