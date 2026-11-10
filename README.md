@@ -47,5 +47,8 @@ Sidebar background (chrome), selected file outline, property labels and divider,
 - Bullets by level: bullet, hollow bullet, square, diamond, repeating (levels 1 to 8)
 - Alternative checkboxes: the [Alternative Checkboxes Reference Set](https://github.com/damiankorcz/Alternative-Checkboxes-Reference-Set)'s 20 characters with its Lucide icons, in Saga hues; `[-]` lines are struck through. A snippet setting `--theme-alternative-checkboxes: disable` on `body` turns them off.
 
+## Callouts
+Saga's `secret` (red), `statblock` (ochre) and `read-aloud` (blue) callout types, with the Saga app's icons.
+
 ## Contrast
 Body ink, muted and faint text, rubric links and the accent fill's white text meet WCAG AA (4.5:1) on the sheet, ground, chrome and chip surfaces in both modes. Gilt is decorative only.
