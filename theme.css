@@ -366,9 +366,7 @@ body.theme-dark.theme-dark {
   --table-border-color: var(--saga-rule);
   --table-header-background: var(--saga-chip);
   --table-header-font: var(--font-interface);
-  --table-header-size: 12px;
   --table-header-weight: 600;
-  --table-text-size: 0.94em;
 
   --embed-border-start: 3px solid var(--saga-gilt);
   --embed-background: transparent;
