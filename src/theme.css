@@ -545,6 +545,29 @@ body.theme-dark.theme-dark {
   font-family: var(--font-monospace);
 }
 
+/* Highlights match inline code's bubble: its height (Source Serif's taller line box needs less padding than Plex Mono at 0.85em) and its inline padding and border (0.3em at 0.85em, 1px). */
+.markdown-rendered mark,
+.markdown-source-view.mod-cm6 .cm-highlight {
+  border-radius: var(--code-radius);
+  padding: 0.065em calc(0.3em * 0.85 + 1px);
+  -webkit-box-decoration-break: clone;
+}
+
+/* With the == markers shown, the markers and text join into one bubble. */
+.markdown-source-view.mod-cm6 .cm-highlight.cm-formatting-highlight {
+  padding-inline: 0;
+  border-radius: var(--code-radius) 0 0 var(--code-radius);
+}
+
+.markdown-source-view.mod-cm6 .cm-formatting-highlight + .cm-highlight:not(.cm-formatting) {
+  padding-inline: 0;
+  border-radius: 0;
+}
+
+.markdown-source-view.mod-cm6 .cm-highlight:not(.cm-formatting) + .cm-formatting-highlight {
+  border-radius: 0 var(--code-radius) var(--code-radius) 0;
+}
+
 .markdown-rendered .inline-title,
 .inline-title {
   letter-spacing: -0.015em;

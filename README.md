@@ -77,7 +77,7 @@ Every marker in the [Alternative Checkboxes Reference Set](https://github.com/da
 
 - Links: rubric, underlined; unresolved links in ink 3 with a dashed underline.
 - Inline code: chip background with a rule ring, ink 2 text.
-- Highlights: gilt at 38%.
+- Highlights: gilt at 38%, the same bubble as inline code; with the `==` markers shown, markers and text form one bubble.
 - Tags: ink 2 pills on chip with a rule ring.
 - Quotes: italic ink 2 beside a 3px gilt bar.
 - Tables: chip header row in the interface font, rule borders.
