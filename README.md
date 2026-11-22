@@ -2,7 +2,7 @@
 
 ![Saga dark and light](assets/preview.png)
 
-An Obsidian theme in the Saga app's modern parchment style: parchment and ink for the light scheme, leather and ink for the dark. It sets Obsidian's CSS variables from Saga's tokens and adds selector rules only where variables cannot reach. It works well with the Saga plugin or standalone.
+A modern serif parchment theme for Obsidian: parchment and ink for the light scheme, leather and ink for the dark. It suits TTRPG-oriented vaults, and parts of it are used in the upcoming Saga plugin. It sets Obsidian's CSS variables from Saga's tokens and adds selector rules only where variables cannot reach.
 
 ## Colours
 
@@ -103,4 +103,4 @@ Bump `version` in `manifest.json` and `package.json`, add it to `versions.json`,
 
 ## Licence
 
-Fonts: SIL Open Font License (`fonts/LICENSE-*.txt`).
+MIT (`LICENSE`). Fonts: SIL Open Font License (`fonts/LICENSE-*.txt`).
