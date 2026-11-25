@@ -83,6 +83,22 @@ Every marker in the [Alternative Checkboxes Reference Set](https://github.com/da
 - Tables: chip header row in the interface font, rule borders.
 - Bullets by level: bullet, hollow bullet, square, diamond, repeating (levels 1 to 8).
 
+## Style Settings
+
+With [Style Settings](https://github.com/mgmeyers/obsidian-style-settings), under Saga:
+
+- **Colourful headings** colours each heading level; off, headings are ink and h6 is ink 2.
+- **Heading 1–6 colour** sets each level's colour for the light and dark schemes:
+
+| Level | Default | Light | Dark |
+| --- | --- | --- | --- |
+| h1 | Rubric | `#9a3324` | `#e0846f` |
+| h2 | Ochre | `#8f5412` | `#d89a52` |
+| h3 | Green | `#336d52` | `#7bbf9b` |
+| h4 | Teal | `#2f5f5a` | `#6fb3a9` |
+| h5 | Blue | `#3d4a7c` | `#9aa6dc` |
+| h6 | Purple | `#6b3a62` | `#c58bb9` |
+
 ## Install
 
 With [BRAT](https://github.com/TfTHacker/obsidian42-brat): Add beta theme, `lobrenov/saga-theme`. Or copy `manifest.json` and `theme.css` into `<vault>/.obsidian/themes/Saga/`, then choose Saga in Settings → Appearance → Themes.

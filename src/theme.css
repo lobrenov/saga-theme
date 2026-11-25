@@ -1,6 +1,64 @@
 /* Saga: a modern parchment theme for Obsidian, matching the Saga app.
  * Palettes are Saga's tokens (src/renderer/tokens.css); light is Saga as is, dark is the same family on leather and ink. */
 
+/* @settings
+name: Saga
+id: saga
+settings:
+  -
+    id: saga-colourful-headings
+    title: Colourful headings
+    type: class-toggle
+  -
+    id: saga-h1-color
+    title: Heading 1 colour
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#9a3324'
+    default-dark: '#e0846f'
+  -
+    id: saga-h2-color
+    title: Heading 2 colour
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#8f5412'
+    default-dark: '#d89a52'
+  -
+    id: saga-h3-color
+    title: Heading 3 colour
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#336d52'
+    default-dark: '#7bbf9b'
+  -
+    id: saga-h4-color
+    title: Heading 4 colour
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#2f5f5a'
+    default-dark: '#6fb3a9'
+  -
+    id: saga-h5-color
+    title: Heading 5 colour
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#3d4a7c'
+    default-dark: '#9aa6dc'
+  -
+    id: saga-h6-color
+    title: Heading 6 colour
+    type: variable-themed-color
+    format: hex
+    opacity: false
+    default-light: '#6b3a62'
+    default-dark: '#c58bb9'
+*/
+
 /* Palette: light */
 .theme-light {
   --saga-ground: #f4efe5;
@@ -45,6 +103,13 @@
   --saga-blue-rgb: 61, 74, 124;
   --saga-purple-rgb: 107, 58, 98;
   --saga-pink-rgb: 161, 80, 106;
+
+  --saga-h1-color: #9a3324;
+  --saga-h2-color: #8f5412;
+  --saga-h3-color: #336d52;
+  --saga-h4-color: #2f5f5a;
+  --saga-h5-color: #3d4a7c;
+  --saga-h6-color: #6b3a62;
 }
 
 /* Palette: dark (warm leather and ink; parchment-coloured ink) */
@@ -91,6 +156,23 @@
   --saga-blue-rgb: 154, 166, 220;
   --saga-purple-rgb: 197, 139, 185;
   --saga-pink-rgb: 220, 146, 168;
+
+  --saga-h1-color: #e0846f;
+  --saga-h2-color: #d89a52;
+  --saga-h3-color: #7bbf9b;
+  --saga-h4-color: #6fb3a9;
+  --saga-h5-color: #9aa6dc;
+  --saga-h6-color: #c58bb9;
+}
+
+/* Colourful headings (Style Settings) */
+body.saga-colourful-headings {
+  --h1-color: var(--saga-h1-color);
+  --h2-color: var(--saga-h2-color);
+  --h3-color: var(--saga-h3-color);
+  --h4-color: var(--saga-h4-color);
+  --h5-color: var(--saga-h5-color);
+  --h6-color: var(--saga-h6-color);
 }
 
 /* Saga plugin renderer colours (the plugin sets these on body and body.theme-dark) */
