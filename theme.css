@@ -604,7 +604,6 @@ body.theme-dark.theme-dark {
   --prompt-border-width: 1px;
   --setting-items-background: var(--saga-field);
   --setting-items-border-color: var(--saga-rule);
-  --setting-items-border-width: 1px;
   --setting-items-radius: var(--radius-l);
   --setting-group-heading-color: var(--saga-ink-3);
 }
@@ -612,6 +611,11 @@ body.theme-dark.theme-dark {
 .theme-dark {
   --checkbox-color: #b5503d;
   --checkbox-color-hover: #c0553f;
+}
+
+.modal.mod-settings,
+.setting-group {
+  --setting-items-border-width: 1px;
 }
 
 .setting-group-heading,
