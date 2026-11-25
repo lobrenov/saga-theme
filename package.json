@@ -1,6 +1,6 @@
 {
   "name": "saga-theme",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Saga theme for Obsidian: modern parchment, light and dark",
   "type": "module",
